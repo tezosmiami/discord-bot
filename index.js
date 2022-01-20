@@ -1,5 +1,5 @@
 const fs = require('fs');
-// const keepAlive = require("./server")
+const keepAlive = require("./server")
 require('dotenv').config();
 const { Client, Collection, Intents } = require('discord.js');
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
@@ -24,5 +24,5 @@ client.on('interactionCreate', async interaction => {
 		return interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 	}
 })
-//  keepAlive()
+ keepAlive()
 client.login(process.env.DISCORD_TOKEN);
