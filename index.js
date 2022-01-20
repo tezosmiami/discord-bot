@@ -8,6 +8,8 @@ client.once('ready', () => {
 	console.log('Ready!');
 });
 
+client.commands = new Collection();
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
