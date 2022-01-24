@@ -13,7 +13,7 @@ const getQuote = async = () => {
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('inspire')
-		.setDescription('zen quotes. . .'),
+		.setDescription('zenquotes api. . .'),
 	async execute(interaction) {
       const quote =  await getQuote();
 		interaction.reply(`${quote}`);
